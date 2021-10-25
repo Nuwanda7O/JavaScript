@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = 123;
+        //不会影响a的值
+        var b = a.toString(); //method
+        String(a); //function
+
+        var s = "123";
+        Number(s);
+        //字符串中有非数字 转换为NaN
+        //true 1
+        //false null 0
+        //空或全空格 0
+
+        var s = "123px"
+        parseInt(s); //123 只取整数
+        parseFloat(s);
+
+        Boolean(a); //除了0 和NaN都是true
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

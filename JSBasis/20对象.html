@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        对象：
+            内建对象 Math
+            宿主对象 BOM DOM
+            自建对象
+        */
+        var obj = new Object();  //可以直接var obj = {name:"dou",name:20,test:{name:"asd"}};
+
+        obj.name = "dou";
+        obj.age = 20;
+
+        //特殊属性名要用 中括号里可以传变量 获得变量值
+        obj["234324"] = 23423243;
+
+        //属性值可以是一个对象 和java一样
+
+
+        delete obj.name;
+
+        //基本数据类型值存在栈中 引用数据类型存放在堆中 存的是地址
+
+        //方法
+        obj.sayName = function(){
+            alert(obj.name);
+        };
+
+        //遍历 n每次取的是属性名 n是变量不能用obj.n的形式取 但是obj[n]可以
+        for(var n in obj){
+            console.log(obj[n]);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

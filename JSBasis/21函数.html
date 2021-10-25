@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //函数也是一个对象
+        var fun = new Function("console.log('hi');");
+
+        fun();
+
+        //实际开发中不使用构造函数创建函数对象 用声明
+        function fun2(a,b) {
+            console.log("hi");
+            console.log(a+b);
+            return;
+        }
+
+        fun2(1,2);
+
+        //匿名函数
+        var fun3 = function() {
+            console.log("hi");
+        }
+
+        fun3();
+
+        //立即执行函数
+        (function(){
+            alert("hi");
+        })();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
