@@ -31,6 +31,22 @@
         (function(){
             alert("hi");
         })();
+
+        //函数也作为一个对象有什么方法呢？
+        function fun() {
+            alert("hi");
+        }
+        //调用call和apply时 都会调用函数执行
+        //不同的是可以将一个对象指定为第一个参数 这个对象将会成为this
+        fun.call();
+        fun.apply();
+
+        //调用函数时浏览器传递两个隐含参数：1函数上下文对象this  2封装实参对象arguments
+        function fun() {
+            console.log(arguments.length);
+        }
+        fun("hello",true); //2 同样可以arguments[1]取出实参
+        //arguments.callee是当前函数对象 即fun
     </script>
 </head>
 <body>

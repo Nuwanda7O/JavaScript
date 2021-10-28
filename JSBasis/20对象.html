@@ -12,7 +12,8 @@
             宿主对象 BOM DOM
             自建对象
         */
-        var obj = new Object();  //可以直接var obj = {name:"dou",name:20,test:{name:"asd"}};
+        var obj = new Object();  
+        //可以直接var obj = {name:"dou",name:20,test:{name:"asd"}};
 
         obj.name = "dou";
         obj.age = 20;
@@ -37,6 +38,25 @@
             console.log(obj[n]);
         }
 
+        //工厂方法创建对象 像创建一个父类
+        function createPerson(name){
+            var obj = new Object();
+            obj.age = 18;
+            obj.name = name;
+            obj.sayName = function(){
+                alert(this.name);
+            }
+            return obj;
+        }
+        var obj2 = createPerson("xiaowu");
+        //使用工厂方法创建都是Object类型 不能区分出类
+        //构造函数
+        function Person(name,age){
+            alert("hi");
+            this.name = name;
+            this.age = age
+        }
+        var per = new Person("xiaoli",12); //new的时候执行构造函数中代码
     </script>
 </head>
 <body>
