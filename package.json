@@ -1,0 +1,23 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "my javascript learning road. from today ...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/Nuwanda7O/JavaScript.git",
+  "keywords": [],
+  "author": "nuwanda <qydou@zufe.edu.cn>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nuwanda7O/JavaScript/issues"
+  },
+  "homepage": "https://github.com/Nuwanda7O/JavaScript#readme",
+  "devDependencies": {
+    "bootstrap": "^5.1.3"
+  },
+  "dependencies": {
+    "vue": "^2.6.14"
+  }
+}
