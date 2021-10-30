@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">tangbohu</button>
+    <script>
+        //事件：事件源 事件类型 事件处理程序 我们称之为事件三要素
+        //事件源：按钮
+        var btn = document.getElementById("btn");
+        //事件类型： 如何触发
+        //事件处理程序 函数赋值方式
+        btn.onclick = function () {
+            alert("hello");
+        }
+    </script>
+
+    <button id="btn2">show current time</button>
+    <div>some time</div>
+    <script>
+        var btn = document.getElementById('btn2');
+        var div = document.querySelector('div');
+        btn.onclick = function() {
+            var date = new Date();
+            div.innerText = date;//更改内容 
+        }
+        btn.onmousemove = function() {
+            var date = new Date();
+            div.innerHTML = "<strong>sdgsgs</strong>";
+        }
+        console.log(div.innerText);//去除空格和换行
+    </script>
+
+    <button id="er">button</button>
+    <input type="text" value="shuruneirong">
+    <script>
+        //修改元素属性（表单）
+        var btn2 = document.getElementById('er');
+        var input = document.querySelector('input');
+        btn2.onclick = function () {
+            input.value= "asdasa";
+            //按钮禁用
+            this.disabled = true;
+        }
+    </script>
+</body>
+</html>

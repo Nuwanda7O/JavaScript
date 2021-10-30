@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            border-bottom:1px solid red;
+            margin:100px auto;
+        }
+        .box input {
+            width: 370px;
+            height: 30px;
+            border: 0;
+            outline: none;
+        }
+        label{
+            float: right;
+            position: relative;
+            top:30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <label for="">there</label>
+        <input type="password" name="" id="">
+    </div>
+    <script>
+        var label = document.querySelector("label");
+        var input = document.querySelector("input");
+        var flag = 0;
+        label.onclick = function () {
+            if(flag==0){
+                input.type = "text";
+                flag = 1;
+            }else{
+                input.type = "password";
+                flag = 0;
+            }
+        }
+    </script>
+</body>
+</html>

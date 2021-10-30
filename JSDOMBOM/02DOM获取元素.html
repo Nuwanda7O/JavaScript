@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="time">2021</div>
+    <script>
+        //先有标签 再有DOM操作
+        var time  = document.getElementById("time");//返回的事element对象 object
+        //console.dir 打印元素对象内容
+        console.dir(time);
+    </script>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li>235</li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <script>
+        var list = document.getElementsByTagName("li");
+        console.log(list);//看对象
+        console.dir(list[2]);
+        //通过父元素获取子元素 要确定是哪一个父元素
+        var ol = document.getElementsByTagName("ol");
+        console.log(ol[0].getElementsByTagName("li"));
+    </script>
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <ul>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        var box = document.getElementsByClassName("box");
+        console.log(box);
+        //h5新增方法 返回指定选择器的第一个元素对象
+        var firstBox = document.querySelector(".box");
+        console.log(firstBox);
+        console.log(document.querySelector("#time"));
+        //选择所有的
+        console.log(document.querySelectorAll(".box"));
+    </script>
+
+    <script>
+        var body = document.body;
+        var html = document.documentElement; //返回html
+    </script>
+</body>
+</html>
