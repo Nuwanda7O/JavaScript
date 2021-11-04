@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 注册事件 -->
+    <button>传统注册事件</button>
+    <button>方法监听注册事件</button>
+    <script>
+        var btns = document.querySelectorAll('button');
+        btns[0].onclick = function () {
+            alert('hi');
+        }
+        btns[1].addEventListener('click',function() { 
+            alert("22");
+        })
+    </script>
+    <!-- 删除事件 -->
+    <script>
+        btns[0].onclick = null;
+        btns[1].removeEventListener('click',fn);
+        function fn() {
+            alert('22');
+        }
+    </script>
+    <!-- DOM事件流 事件传播顺序-->
+    <!-- 捕获 冒泡取决于第三个参数 其实就是多个函数执行顺序的问题-->
+
+    <!-- 事件对象 -->
+    <div>123</div>
+    <script>
+        var div = document.querySelector('div');
+        div.onclick = function (event) {
+            event.target;//返回触发对象的元素 而this是绑定事件的对象
+            event.type; //返回事件类型
+            event.preventDefault();//阻止默认事件 如超链接跳转
+            event.stopPropagation();
+        }
+    </script>
+    <!-- 事件委托 冒泡的好处-->
+    <!-- 以前要给5个li都添加事件 现在只给ul添加 点击li 
+        冒泡上去 只操纵一次DOM即可 用event.target找到点击的li -->
+
+    <!-- 常用鼠标事件 -->
+    
+
+</body>
+</html>

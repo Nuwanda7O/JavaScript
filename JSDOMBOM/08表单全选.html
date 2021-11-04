@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" name="" id="j_cbAll">
+                </th>
+                <th>subject</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody id="jj">
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id="">
+                </td>
+                <td>iphone1</td>
+                <td>500</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+        </tbody>
+    </table>
+    <script>
+        var j = document.getElementById('j_cbAll');
+        var js = document.getElementById('jj').getElementsByTagName('input');
+        j.onclick = function () {
+            this.checked = true;
+        }
+
+        j.getAttribute('id');//get attribute
+        j.setAttribute('id','asdf');
+        //注意针对的是自定义属性
+    </script>
+</body>
+</html>

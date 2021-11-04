@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        元素节点 nodeType1
+        属性节点 nodeType2
+        文本节点 nodeType3
+     -->
+    <div>
+        <span class=".er">
+            x
+            <h></h>
+            <h></h>
+            <h></h>
+            <h></h>
+            <h></h>
+        </span>
+    </div>
+    <script>
+        var er = document.querySelectorAll('.er');
+        er.parentNode;//最近的父亲
+        er.childNodes; //所有的孩子 得到一个列表 注意换行也算节点
+        er.children;//所有元素节点 常用
+        er.firstElementChild; //第一个子元素节点
+        er.children[0];
+        h.nextElementSibling;
+    </script>
+</body>
+</html>
