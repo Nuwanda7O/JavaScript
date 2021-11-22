@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fn = function () {
+
+        }
+        //省略function
+        let fnn = (a,b) => {
+            return a+b;
+        }
+        fnn(1,2);
+        //this是静态的 始终指向函数声明时所在作用域下的this的值
+        function a(){
+            console.log('a');
+        }
+        let a2 = ()=>{
+            console.log('a');
+        }
+        window.name = 'ssssss';
+        const SSSSS = {
+            name:'asaf'
+        }
+        a();
+        a2();
+
+        a.call(SSSSS);
+        a2.call(SSSSS);
+    </script>
+</body>
+</html>

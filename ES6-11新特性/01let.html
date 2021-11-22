@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 10, b = 'sdg', c = [];
+        /*
+        不能重复声明 但var可以
+        块级作用域 可以使用{   }这种代码块套起来 if else for while的块也一样
+        不存在变量提升 未声明的变量使用不会有undefined
+        不影响作用域链
+        */
+       {
+           let school = 'as';
+           function fn() { 
+               console.log(school);
+            }
+       }
+    </script>
+
+    <!-- 实例 -->
+    <div class="item">hhhh</div>
+    <div class="item">2345252</div>
+    <div class="item"></div>
+    <script>
+        let items = document.getElementsByClassName('item');
+        for(let i = 0;i<items.length;i++){
+            items[i].onclick = function(){
+                this.style.background = 'pink';
+            }
+        }
+    </script>
+</body>
+</html>
