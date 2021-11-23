@@ -18,11 +18,11 @@
 var fs = require("fs");
 
 
-//打开文件
+//打开文件、//是IO完成后回调函数会开始执行
 fs.open("hello2.txt","w",function (err , fd) {
 	//判断是否出错
 	if(!err){
-		//如果没有出错，则对文件进行写入操作
+		//如果没有出错，则对文件进行写入操作 写入完后才输出log
 		fs.write(fd,"这是异步写入的内容",function (err) {
 			if(!err){
 				console.log("写入成功~~");
