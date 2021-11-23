@@ -32,7 +32,8 @@ app.all('/json-server', (request, response) => {
     response.setHeader('Access-Control-Allow-Headers', '*');
     //响应一个数据
     const data = {
-        name: 'atguigu'
+        name: 'atchjvhjvjhu',
+        age:2
     };
     //对对象进行字符串转换
     let str = JSON.stringify(data);
